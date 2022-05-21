@@ -6,72 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        
-        div {
+        .container {
             display: flex;
             flex-direction: row;
-            float: left;
-            
-           
+            flex-wrap: wrap; 
         }
         .block_1 {
-            flex-direction: column;
-            width: 230px;
+            width: 15em;
             background-color: rgb(207, 201, 201);
-            
             margin-bottom: .2em;
             padding-top: 20px; 
         }
-        .block_2 {
-           width: 230px;
-            background-color: rgb(172, 168, 168);
-            margin-bottom: 0.2em;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            flex-direction: row;
+        .block_2 {      
+            width: 100%;
+            margin-bottom: .2em;
+            background-color: rgb(172, 168, 168); 
         }
-        #block_2_1 {
-            height: fit-content;
-            max-height: max-content;
-        }
-        #block_2_2 {
-            height: fit-content;
-            max-height: max-content;
-            margin-top: 1px;
-            flex-direction: row;
-        }
-       
         .block_3 {
-            flex-direction: row;
-            width: 230px;
+            width: 100%;
             background-color: rgb(172, 163, 163);
-            margin-bottom: 0.2em;
+            margin-bottom: .2em;
         }
     </style>
 </head>
-<body id="container">
-    <div class="block_1"><strong>Блок навигации</strong>
-        <ul>
-            <li>Ширина 15 em</li>
-            <li>Должен присутствовать цвет фона</li>
-            <li>Располагается слева</li>
-            <li>Блокпримере. </li>
-        </ul> 
-    </div> 
-    <div class="block_2" id="block_2_1"><strong>Статья 1</strong> <br> <br>
-        Размер блока: <br>
-        Занимает всю доступную ширину <br>
-        Должен присутствовать цвет фона <br>
-        Во всех "статьях" сделайте отступ от соседей равным .2em, при помощи свойства margin-bottom
-    </div>
-    <div class="block_2" id="block_2_2"><strong>Статья 2</strong> <br> <br>
-        Размер блока: <br>
-        Занимает всю доступную ширину <br>
-        Должен присутствовать цвет фона <br>
-        авание организовано по правому краю внутри данной статьи для этой картинки. <br>
-        <img align="right" src="./icon_mail.png" alt="button" title="button">
-    </div>
-    <div class="block_3">Нижний блок, подвал. Занимает всю доступную ширину. Высота определяется помещённым внутрь контентом.  
+<body>
+    <div class="container"> 
+        <div class="block_1"><strong>Блок навигации</strong>
+            <ul>
+                <li>Ширина 15 em</li>
+                <li>Должен присутствовать цвет фона</li>
+                <li>Располагается слева</li>
+                <li>Блок навигации наполните контентом достаточным, чтобы по высоте он начинал захватывать вторую статью, как показано в данном примере.</li>
+            </ul> 
+        </div> 
+        <div>
+            <div class="block_2" id="block_2_1"><strong>Статья 1</strong> <br> <br>
+                Размер блока: <br>
+                Занимает всю доступную ширину <br>
+                Должен присутствовать цвет фона <br>
+                Во всех "статьях" сделайте отступ от соседей равным .2em, при помощи свойства margin-bottom
+            </div>
+            <div class="block_2" id="block_2_2"><strong>Статья 2</strong> <br> <br>
+                Размер блока: <br>
+                Занимает всю доступную ширину <br>
+                Должен присутствовать цвет фона <br>
+                авание организовано по правому краю внутри данной статьи для этой картинки. <br>
+                <img align="right" src="../icon_mail.png" alt="button" title="button">
+            </div>
+        </div>
+        <div class="block_3">Нижний блок, подвал. Занимает всю доступную ширину. Высота определяется помещённым внутрь контентом.  
+        </div>
     </div>
 </body>
 </html>
