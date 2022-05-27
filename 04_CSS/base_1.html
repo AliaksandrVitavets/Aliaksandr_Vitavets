@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.list_level_2  {display: none}
+        div.list > div:hover div.list_level_2 {display: inline; position: relative}
+        p {
+            border: 1px solid #85888a;
+            border-radius: 0px 15px 0px 15px;
+            padding-bottom: 10px;
+            text-indent: 3%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Форматы файлов.</h1>
+    <p>.DOC или .doc (от англ. <img src="arrow.png"><a href="arrow.png">document</a>) - расширение имени файла, используемое для файлов, представлюящих текст, с разметкой или без. Расширение .DOC часто использовалось для обозначения простых текстовых файлов без формирования, однако позже стало использоваться для двоичных форматов с разметкой. <br>
+        <a href="ms_word.jpeg">Документ MS Word</a><img src="ms_word.jpeg"></p>
+    <p>Portable Document Format (<img src="arrow.png"><a href="arrow.png">PDF</a>) - межплатформенный формат электронных документов, разработанный фирмой Adobe Systems с использованием ряда возможностей языка Postscript. <br>
+        <a href="pdf.png">Документ PDF</a><img src="pdf.png"></p>
+    <p>ZIP - популярный формат сжатия данных и архиваци файлов. Файл в этом формате обычно имеет расширение <img src="arrow.png"><a href="arrow.png">.zip</a> и хранит в сжатом или несжатом виде один или несколько файлов, которое можно из него извлечь путем распаковки с помощью специальной программы. <br>
+        <a href="zip.gif">Архив</a><img src="zip.gif"></p>
+        <h2>Это список файлов</h2>
+    <div class='list'>
+            <div><img src="file.jpeg"><a href="ms_word.jpeg">Документ MS Word</a>
+                <div class='list_level_2'><img src="ms_word.jpeg"></div>
+            </div>
+            <div><img src="file.jpeg"><a href="pdf.png">Документ PDF</a>
+                <div class='list_level_2'><img src="pdf.png"></div>
+            </div>
+            <div><img src="file.jpeg"><a href="zip.gif">Архив</a>
+                <div class='list_level_2'><img src="zip.gif"></div>
+            </div>
+</body>
+</html>
