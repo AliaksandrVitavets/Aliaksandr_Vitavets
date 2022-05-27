@@ -16,25 +16,20 @@
             background-color:black
         }
         body {
-            counter-reset: counter;
-            
-
-        
-
+            counter-reset: counter 65;
         }
         td::before {
-             64;
             counter-increment: counter -1;
             content: counter(counter);
             padding-left: 20px;
             font-size: xx-large;
         }
-        td:nth-child(2n+1) { color: white;
+        tr:nth-child(odd) > td:nth-child(odd) {
+            color:white
         }
-        td:nth-child(2n) { color: white;
+        tr:nth-child(even) > td:nth-child(even) {
+            color:white
         }
-        
-        
     </style>
 </head>
 <body>
