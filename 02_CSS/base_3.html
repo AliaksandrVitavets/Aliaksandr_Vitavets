@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block_1 {
+            width: 15em;
+            background-color: rgb(207, 201, 201);
+            float: left;
+            padding-top: 20px; 
+        }
+        .block_1_1 {
+            background-color: rgb(230, 221, 221);
+            width: 15em;
+            height: 14em; 
+        }
+        .block_2 {
+            background-color: rgb(172, 168, 168);
+            margin-bottom: 0.2em;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .spacer {
+          clear: left;
+       }
+        .block_3 {
+           float: left;
+           background-color: rgb(153, 144, 144);
+           margin-bottom: 0.2em;
+           margin-top: .2em;
+           width: 100%;   
+       }  
+    </style>
+</head>
+<body>
+    <div class="block_1"><strong>Блок навигации</strong>
+        <ul>
+            <li>Ширина 15 em</li>
+            <li>Должен присутствовать цвет фона</li>
+            <li>Располагается слева</li>
+            <li>Блок навигации наполните контентом достаточным, чтобы по высоте он начинал захватывать вторую статью, как показано в данном примере. </li>
+        </ul> <div class="block_1_1"></div>
+    </div> 
+    <div class="block_2"><strong>Статья 1</strong> <br> <br>
+        Размер блока: <br>
+        Занимает всю доступную ширину <br>
+        Должен присутствовать цвет фона <br>
+        Во всех "статьях" сделайте отступ от соседей равным .2em, при помощи свойства margin-bottom
+    </div>
+    <div class="block_2"><strong>Статья 2</strong> <br> <br>
+        Размер блока: <br>
+        Занимает всю доступную ширину <br>
+        Должен присутствовать цвет фона <br>
+        Во всех "статьях" сделайте отступ от соседей равным .2em, при помощи свойства margin-bottom. Картинка вставляется при помощи тега, плавание организовано по правому краю внутри данной статьи для этой картинки. <br>
+        <img align="right" src="icon_mail.png" alt="button" title="button"> 
+        <div class="spacer"></div>
+        <div class="block_3">Нижний блок, подвал. Занимает всю доступную ширину. Высота определяется помещённым внутрь контентом.  
+        </div>
+    </div>
+</body>
+</html>
