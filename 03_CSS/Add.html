@@ -6,25 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .days {
-            display: inline-flex;
-        }
         .days > div {
             background-color: rgb(211, 207, 207);
             border: solid 1px;
             position: relative;
             cursor: pointer;
             width: 150px;
+            float: left;
+            height: 20px;
         }
         .meals { 
             width: 150px; 
-            opacity: 0;
+            position: absolute;
+            top: 20;
+            left: -1px;
+            z-index: 9;
+            overflow: hidden;
+            height: 0;
         }
         .meals > div { 
             background-color: rgb(211, 207, 207); 
             border: solid 1px; 
             cursor: pointer;
-            
         }
         .days > :hover .meals { 
              display: inline;
@@ -33,6 +36,7 @@
              left: 0%;
              transition-duration: 5s;
              opacity: 1;
+             height: 70px;
             }
         @media all and (max-width: 924px){
             .days {display: inline-table;

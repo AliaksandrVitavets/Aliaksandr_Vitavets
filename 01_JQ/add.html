@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #submit {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="http://fe.it-academy.by/TestForm.php" method="get" id="form">
+        <fieldset>
+            <legend><h1>Проверка пароля</h1> </legend>
+            <input type="text" name="password" id="password">* Пароль <br>
+            <input type="text1" name="password_check" id="password_check">* Повторите пароль <br>
+            <input type="submit" id="submit" value="Отправить">
+        </fieldset>
+    </form>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+            <script>
+                $(document).ready(function($){ 
+                $('#form').click(function(){
+                    var password_confirm = $('input[type=text1]').val();
+                    var password = $('input[type=text]').val();
+                if(password != password_confirm){
+                    $('input[type=text1]').css('backgroundColor', 'red');
+                    $('input[type=text]').css('backgroundColor', 'red');
+                    }
+                else{
+                    $('input[type=text1]').css('backgroundColor', 'green');
+                    $('input[type=text]').css('backgroundColor', 'green');
+                }
+            })
+        });
+            </script>
+</body>
+</html>
