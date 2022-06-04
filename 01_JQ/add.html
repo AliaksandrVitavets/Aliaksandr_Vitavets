@@ -16,7 +16,7 @@
         <fieldset>
             <legend><h1>Проверка пароля</h1> </legend>
             <input type="text" name="password" id="password">* Пароль <br>
-            <input type="text1" name="password_check" id="password_check">* Повторите пароль <br>
+            <input type="text1" name="password_check" id="password">* Повторите пароль <br>
             <input type="submit" id="submit" value="Отправить">
         </fieldset>
     </form>
@@ -26,10 +26,10 @@
         crossorigin="anonymous"></script>
             <script>
                 $(document).ready(function($){ 
-                $('#form').click(function(){
+                $('#form').on('keyup',function(){
                     var password_confirm = $('input[type=text1]').val();
                     var password = $('input[type=text]').val();
-                if(password != password_confirm){
+                if(password_confirm != password){
                     $('input[type=text1]').css('backgroundColor', 'red');
                     $('input[type=text]').css('backgroundColor', 'red');
                     }

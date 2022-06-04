@@ -6,12 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        tbody tr:first-child:hover {background-color: rgb(190, 35, 87);}
-        tbody tr:nth-child(2):hover {background-color: rgb(194, 120, 25);}
-        tbody tr:nth-child(3):hover {background-color: rgb(66, 245, 11);}
-        tbody tr:nth-child(4):hover {background-color: rgba(76, 192, 207, 0.973);}
-        tbody tr:nth-child(5):hover {background-color: rgb(255, 127, 127);}
-        tbody tr:nth-child(6):hover {background-color: rgb(71, 15, 161);}
         table {border-collapse: collapse;
             border-top: 2px solid white;
             border-right: 2px solid white;
@@ -32,11 +26,17 @@
         p {
             text-indent: 170px;
         }
+        #btn {
+            background-color: blue;
+            color: white;
+            height: 30px;
+            width: 150px;
+        }
     </style>
 </head>
 <body>
     <table>
-    <tr class="line_1">
+    <tr>
         <td align="center"><strong>ФИО</strong></td>
         <td><strong>пол</strong></td>
         <td><strong>должность</strong></td>
@@ -44,7 +44,7 @@
         <td><strong>Данные 01</strong></td>
         <td><strong>Данные 02</strong></td>
     </tr>
-    <tr class="line_2">
+    <tr>
         <td><strong>Иванов Иван Иванович</strong> </td>
         <td>М</td>
         <td>начальник</td>
@@ -52,7 +52,7 @@
         <td>4567</td>
         <td>3453</td>
     </tr>
-    <tr class="line_3">
+    <tr>
         <td><strong>Петрова Илона Петровна</strong></td>
         <td>Ж</td>
         <td>секретарь</td>
@@ -60,7 +60,7 @@
         <td>98795</td>
         <td>46523</td>
     </tr>
-    <tr class="line_4">
+    <tr>
         <td><strong>Сидоров Илья Игоревич</strong></td>
         <td>М</td>
         <td>бухгалтер</td>
@@ -68,7 +68,7 @@
         <td>743434</td>
         <td>987979</td>
     </tr>
-    <tr class="line_5">
+    <tr>
         <td><strong>Пупин Фёдор Фёдорович</strong></td>
         <td>М</td>
         <td>водитель</td>
@@ -76,7 +76,7 @@
         <td>74323434</td>
         <td>9232379</td>
     </tr>
-    <tr class="line_6">
+    <tr>
         <td><strong>Крупин Сергей Иванович</strong></td>
         <td>М</td>
         <td>водитель 2</td>
@@ -86,5 +86,28 @@
     </tr> 
 </table>
 <p>ДАННЫЕ О СОТРУДНИКАХ</p>
+<button id="btn"><span>Нет скрытых строк</span></button>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous">
+</script>
+<script>
+    $(document).ready(function($){
+        $('tr').click(function(){
+  $(this).slideUp(function() {
+    $("span").text("Показать все строки");
+  });
+});
+    });
+
+    $(document).ready(function($){
+        $('#btn').click(function(){
+  $('tr').slideDown(function() {
+    $("span").text("Нет скрытых строк");
+  });
+});
+    });
+</script>
 </body>
 </html>
